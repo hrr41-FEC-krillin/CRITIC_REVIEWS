@@ -1,11 +1,12 @@
 import React from 'react';
+import { Extend_style } from './Styles.jsx';
 
 const ExtendReview = (props) => {
     let extToggle;
     if (!props.extentR) {
-      extToggle = <a className="review_extend" onClick={props.extendR}> Full Review </a>
+      extToggle = <Extend_style className="review_extend" onClick={props.extendR}> Full Review </Extend_style>
     } else {
-      extToggle = <a className="review_extend" onClick={props.extendR}> Pre Review </a>
+      extToggle = <Extend_style className="review_extend" onClick={props.extendR}> Pre Review </Extend_style>
     }
    return (
     <>

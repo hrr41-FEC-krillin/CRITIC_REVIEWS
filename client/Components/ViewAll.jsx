@@ -1,15 +1,14 @@
 import React from 'react';
-
+import { ViewAllreviews, ViewAll_toggle } from './Styles.jsx';
+ 
 const ViewAll = (props) => {
     let extend;
-    if( !props.extent ) extend = <>View All Reviews</>;
-    else extend = <>View Top 10 Reviews</>;
+    if( !props.extent ) extend = <a className="view_all_critic_reviews" onClick={props.extendAR}>View All Reviews</a>;
+    else extend = <a className="view_all_critic_reviews" onClick={props.extendAR}>View Top 10 Reviews</a>;
     return (
-        <div className="view-all">
-            
-            <a className="view_all_critic_reviews" onClick={props.extendAR}>{extend}</a>
-            
-        </div>
+        <ViewAllreviews className="view-all">            
+            {extend}            
+        </ViewAllreviews>
     )
 }
 

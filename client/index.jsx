@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
+import { ContentReviews } from './Components/Styles.jsx';
 import CRHeader from './Components/CRHeader.jsx';
 
 class CR_reviews extends React.Component {
@@ -106,11 +107,11 @@ class CR_reviews extends React.Component {
     render() {
         // console.log("render",this.state);
         return(
-            <section id="contentReviews" className="panel panel-rt panel-box">
+            <ContentReviews class="content_reviews">
                 <CRHeader movieName={this.state.movieName} list={this.state.displayTop10}
                  extList={this.state.extendDisplayCR} extent={this.state.extendAllReviews} extendAR={this.extendReviews} 
                  count={this.state.count} fetchSort={this.fetchSortedReviews} />
-            </section>
+            </ContentReviews>                
         )
     }
 }

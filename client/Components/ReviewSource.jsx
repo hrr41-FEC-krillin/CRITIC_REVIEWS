@@ -1,27 +1,28 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import { Review_resource, User_photo, User_info, Cite_author, User_name, Publication, Superreviewer } from './Styles.jsx';
 
 const ReviewSource = (props) => {
     let tcToggle;
     if (props.topCritic) {
-      tcToggle = <div className="small superreviewer"><span className="glyphicon glyphicon-star">STAR HERE</span> Top Critic </div>
+      tcToggle = <Superreviewer className="small superreviewer"><span className="glyphicon glyphicon-star"></span> Top Critic </Superreviewer>
     } else {
-      tcToggle = <div className="small superreviewer"><span className="glyphicon glyphicon-star" hidden></span></div>
+      tcToggle = <Superreviewer className="small superreviewer"></Superreviewer>
     }
     return(
-        <div className="review_source media">
-            <div className="pull-left">
+        <Review_resource className="review_source media">
+            <User_photo className="pull-left">
                 <img data-src={props.photo} width="50" height="50" className="critic_thumb js-lazyLoad" src={props.photo} data-revealed="true" />
-            </div>
-            <cite className="media-body quote_bubble__cite">
+            </User_photo>
+            <User_info className="media-body quote_bubble__cite">
 
-                <p className="quote_bubble__cite-author">
-                    <a className="unstyled articleLink fgm" >{props.username}</a>
-                </p>
-                    <a className="subtle small" value={props.publication}></a>
-                    {tcToggle}
-            </cite>
-        </div>
+                <Cite_author className="quote_bubble__cite-author">
+                    <User_name className="unstyled articleLink fgm" >{props.username}</User_name>
+                </Cite_author>
+                <br/>
+                <Publication className="subtle small">{props.publication}</Publication>
+                {tcToggle}
+            </User_info>
+        </Review_resource>
     )
 }
 
