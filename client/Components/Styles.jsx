@@ -80,12 +80,8 @@ export const Panel_body = Style.div`
 `; 
 
 //font needed
-export const CriticHeaders = Style.p`
-    @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
-
-    font-family: 'PT Sans Narrow', sans-serif;    
+export const CriticHeaders = Style.p`    
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -101,6 +97,8 @@ export const CriticHeaders = Style.p`
 
 //font needed
 export const CriticHeadersSort = Style.a`
+    @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+    font-family: 'Crimson Text', serif;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
@@ -108,7 +106,6 @@ export const CriticHeadersSort = Style.a`
     text-decoration: none;
     font-size: 14px;
     line-height: 18px;
-    font-family: 'PT Sans Narrow', sans-serif;    
     color: gray;
 `;
 //font needed
@@ -119,15 +116,14 @@ export const Cr_reviews = Style.div`
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
-    column-count: 2;
-    column-fill: balance-all;
+    column-fill: balance;
     column-gap: 50px;
     position: relative;
     font-family: 'PT Sans Narrow', sans-serif;
     box-sizing: border-box;
 `;
 
-export const Top_critic_left = Style.li`
+export const Top_critic = Style.li`
     -webkit-tap-highlight-color: transparent;
     font-size: 16px;
     line-height: 1.25;
@@ -138,8 +134,9 @@ export const Top_critic_left = Style.li`
     list-style-type: none;
     box-sizing: border-box;
     float: left!important;
-    clear: left;
+    clear: ${props => props.key % 2 === 0 ? "left" : "right" };
     margin-top: 15px;
+    margin-right: 30px;
     width: 346.5px;
 `;
 
@@ -255,13 +252,14 @@ export const Review_block = Style.blockquote`
 `;
 
 export const Review_style = Style.p`
+    @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+    font-family: 'Crimson Text', serif;
     -webkit-tap-highlight-color: transparent;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
     list-style-type: none;
-    font-family: 'Franklin Gothic FS Book','Helvetica Neue',Helvetica,Arial,sans-serif;
     box-sizing: border-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -290,12 +288,13 @@ export const Extend_style = Style.a`
 `;
 
 export const Small_bar = Style.div`
+    @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+    font-family: 'Crimson Text', serif;
     -webkit-tap-highlight-color: transparent;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     box-sizing: border-box;
     float: right!important;

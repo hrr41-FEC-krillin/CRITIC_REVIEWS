@@ -107,7 +107,7 @@ class CR_reviews extends React.Component {
     render() {
         // console.log("render",this.state);
         return(
-            <ContentReviews class="content_reviews">
+            <ContentReviews className="content_reviews">
                 <CRHeader movieName={this.state.movieName} list={this.state.displayTop10}
                  extList={this.state.extendDisplayCR} extent={this.state.extendAllReviews} extendAR={this.extendReviews} 
                  count={this.state.count} fetchSort={this.fetchSortedReviews} />

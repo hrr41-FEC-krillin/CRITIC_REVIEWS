@@ -2,7 +2,7 @@ import React from 'react';
 import ReviewSource from './ReviewSource.jsx';
 import ViewAll from './ViewAll.jsx';
 import CReview from './CReview.jsx';
-import { Cr_reviews, Top_critic_left, } from './Styles.jsx';
+import { Cr_reviews, Top_critic, } from './Styles.jsx';
 
 const ReviewList = (props) => {
     // console.log("RL",props)
@@ -10,14 +10,14 @@ const ReviewList = (props) => {
     props.extent ? currtList = props.list.concat(props.extList) : currtList = props.list;
     // console.log("currentList", currtList)
     return(
-        <Cr_reviews class="review_container">
+        <Cr_reviews className="review_container">
         {
             currtList.map((item, index) => (
                 <ul key={index}>
-                    <Top_critic_left class="single_review">
+                    <Top_critic className="single_review" key={index} >
                         <CReview item={item.reviews} key={index} />                            
                         <ReviewSource photo={item.user_photo} username={item.user_name} publication={item.reviews.publication} topCritic={item.reviews.rank}/>
-                    </Top_critic_left>
+                    </Top_critic>
                 </ul>
             ))
         }

@@ -32,11 +32,10 @@ class CReview extends React.Component {
     this.state.currtToggle ? states.postReview = this.state.currtReview.review : states.postReview = this.state.currtReview.review.split(".")[0].concat(" ...");
     // console.log(states);
     return(
-    <Review_quote class="single_review_container">
-        <Media className="media">
+    <Review_quote className="single_review_container">
+        <Media className="media" >
             <Potato_pull_left className="pull_left">
             <Media_img data-src={states.src} className="img" src={states.src} ></Media_img>
-            {/* <img data-src={states.src} width="50" height="50" src={states.src} data-revealed="true" className="media-img icon small rotten" /> */}
             </Potato_pull_left>
             <Review_block className="media-body quote_bubble__quote" cite="http://google.com">
                 
