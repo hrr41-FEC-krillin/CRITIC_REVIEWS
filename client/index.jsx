@@ -67,14 +67,15 @@ class CR_reviews extends React.Component {
     }
 
     fetchCReviews() {
-        Axios.get('/api/cr_reviews')
-            .then(results => /*console.log(results))*/
+        Axios.get('http://127.0.0.1:4540/api/cr_reviews')
+            .then(results => {
+                console.log(results)
                 this.setState({
                     //randomly choose one movie name from db
                     movieName: results.data[Math.floor(Math.random() * 99)].reviews.movie_name,
                     displayCR: results.data
                 })
-            )
+            })
             .then(() => {
                 this.setState({
                     displayCR: this.state.displayCR.filter(result => result.reviews.movie_name == this.state.movieName
@@ -100,7 +101,13 @@ class CR_reviews extends React.Component {
                 displayTop10: this.state.displayCR.slice(0, 10),
                 extendDisplayCR: this.state.displayCR.slice(10)
             }))
-            .then(() => console.log(this.state))
+            .catch(error => {
+                console.log(error);
+            })
+            .finally(() => {
+                console.log(this.state);
+                res.status(200).end(this.state);
+            })
     }
 
 

@@ -2,9 +2,11 @@
 import Style from 'styled-components';
 
 export const ContentReviews = Style.section`
-    font-family: sans-serif;
+    @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
+
+    font-family: 'PT Sans Narrow', sans-serif;   
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -17,17 +19,17 @@ export const ContentReviews = Style.section`
     border: none;
     clear: both;
     cursor: default;
+    width: 800px;
 `;
 
 export const Title_style = Style.h2`
-    @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
-    font-family: 'PT Sans Narrow', sans-serif;    
+    font-family: 'Helvetica, Impact, Arial, sans-serif';    
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     cursor: default;
     box-sizing: border-box;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     margin-top: 4px;
     border-bottom: 1px solid transparent;
     font-weight: 600;
@@ -35,12 +37,12 @@ export const Title_style = Style.h2`
     width: 100%;
     position: relative;
     overflow: hidden;
-    font-size: 28px;
+    font-size: 24px;
     border-radius: 0;
     clear: left;
     color: #2A2C32;
     text-transform: uppercase;
-    padding: 10px 15px 10px 25px;
+    padding: 10px 10px 10px 25px;
     float: initial;
     padding-left: 25px;
     ::before {
@@ -50,6 +52,7 @@ export const Title_style = Style.h2`
         height: 20px;
         position: absolute;
         left: 0;
+        margin-top:3px;
     }
 
     ::after {
@@ -61,6 +64,8 @@ export const Title_style = Style.h2`
         position: absolute;
         margin-left: 10px;
         width: 100%;
+        margin-top:3px;
+        
     }
 `;
 
@@ -69,7 +74,7 @@ export const Panel_body = Style.div`
 
     font-family: 'PT Sans Narrow', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -87,7 +92,9 @@ export const CriticHeaders = Style.p`
     color: #2A2C32;
     cursor: default;
     box-sizing: border-box;
-    margin: 0 0 10px;
+    margin: 0 15px;
+    margin-top: 15px;
+    font-weight: 600;
     ::before {
         content: " ";
         display: table;
@@ -96,20 +103,20 @@ export const CriticHeaders = Style.p`
 `;
 
 export const CriticHeadersSort = Style.a`
-    @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
-    font-family: 'Crimson Text', serif;
+
+    font-family: 'Helvetica, Impact, Arial, sans-serif';
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     background-color: transparent;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
     color: gray;
 `;
 export const Cr_reviews = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -123,7 +130,7 @@ export const Cr_reviews = Style.div`
 
 export const Top_critic = Style.li`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -133,19 +140,16 @@ export const Top_critic = Style.li`
     box-sizing: border-box;
     float: left!important;
     clear: ${(props) => (props.key % 2 === 0 ? 'left' : 'right')};
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 30px;
     width: 346.5px;
 `;
 
 export const Review_quote = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
     line-height: 1.25;
-    -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     box-sizing: border-box;
     border-radius: 0;
@@ -153,12 +157,12 @@ export const Review_quote = Style.div`
     position: relative;
     width: 100%;
     border: 2px solid #000;
-    padding: 12px;
+    padding: 15px;
 `;
 
 export const Media = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -198,7 +202,7 @@ export const Media = Style.div`
 
 export const Potato_pull_left = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -211,21 +215,21 @@ export const Potato_pull_left = Style.div`
 `;
 
 export const Media_img = Style.span`
--webkit-tap-highlight-color: transparent;
--webkit-font-smoothing: antialiased;
-color: #2A2C32;
-cursor: default;
-font-family: 'PT Sans Narrow', sans-serif;
-list-style-type: none;
-box-sizing: border-box;
-font-size: 14px;
-line-height: 18px;
-display: inline-block;
-vertical-align: text-bottom;
-height: 24px;
-width: 24px;
-background: url(${(props) => props.src}) no-repeat;
-background-size: cover;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    color: #2A2C32;
+    cursor: default;
+    font-family: 'PT Sans Narrow', sans-serif;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: 24px;
+    width: 24px;
+    background: url(${(props) => props.src}) no-repeat;
+    background-size: cover;
 `;
 
 export const Review_block = Style.blockquote`
@@ -249,10 +253,10 @@ export const Review_block = Style.blockquote`
 `;
 
 export const Review_style = Style.p`
-    @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
-    font-family: 'Crimson Text', serif;
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 12px;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
@@ -269,12 +273,14 @@ export const Review_style = Style.p`
     max-height: ${(props) => (!props.Toggle ? '5em' : 'initial!important')};    
 `;
 export const Extend_style = Style.a`
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    font-family: 'Roboto', sans-serif;
+
     -webkit-tap-highlight-color: transparent;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
-    font-size: 12px;
+    font-size: 11px;
     box-sizing: border-box;
     background-color: transparent;
     color: #4472CA;
@@ -282,8 +288,8 @@ export const Extend_style = Style.a`
 `;
 
 export const Small_bar = Style.div`
-    @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
-    font-family: 'Crimson Text', serif;
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
@@ -292,12 +298,12 @@ export const Small_bar = Style.div`
     list-style-type: none;
     box-sizing: border-box;
     float: right!important;
-    font-size: 12px;
+    font-size: 11px;
 `;
 
 export const Review_resource = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -313,7 +319,7 @@ export const Review_resource = Style.div`
 
 export const User_photo = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -327,7 +333,7 @@ export const User_photo = Style.div`
 
 export const User_info = Style.cite`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -345,12 +351,10 @@ export const User_info = Style.cite`
 
 export const Cite_author = Style.cite`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     font-style: inherit;
     box-sizing: border-box;
@@ -359,8 +363,10 @@ export const Cite_author = Style.cite`
 `;
 
 export const User_name = Style.a`
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     list-style-type: none;
@@ -369,39 +375,42 @@ export const User_name = Style.a`
     background-color: transparent;
     text-decoration: none;
     color: #000;
-    font-family: 'Franklin Gothic FS Med';
 `;
 
 export const Publication = Style.a`
+    font-family: 'Helvetica, Impact, Arial, sans-serif';    
+
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     font-style: inherit;
     box-sizing: border-box;
     background-color: transparent;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 11px;
     line-height: 18px;
     color: #757A84;
 `;
 
 export const Superreviewer = Style.div`
+    @import url('https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap');
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Lobster', cursive;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     cursor: default;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     font-style: inherit;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: 20;
     line-height: 18px;
     color: #FFB600;
 `;
 
 export const ViewAllreviews = Style.div`
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
@@ -414,11 +423,11 @@ export const ViewAllreviews = Style.div`
 `;
 
 export const ViewAll_toggle = Style.a`
+    font-family: 'Helvetica, Impact, Arial, sans-serif';    
     -webkit-tap-highlight-color: transparent;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
-    font-family: 'PT Sans Narrow', sans-serif;
     box-sizing: border-box;
     background-color: transparent;
     text-decoration: none;
