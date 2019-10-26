@@ -106,7 +106,6 @@ class CR_reviews extends React.Component {
             })
             .finally(() => {
                 console.log(this.state);
-                res.status(200).end(this.state);
             })
     }
 

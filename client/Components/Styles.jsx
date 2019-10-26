@@ -1,14 +1,10 @@
 /* eslint-disable camelcase */
 import Style from 'styled-components';
 
-export const ContentReviews = Style.section`
-    @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
-
-    font-family: 'PT Sans Narrow', sans-serif;   
+export const ContentReviews = Style.section` 
     -webkit-tap-highlight-color: transparent;
     font-size: 24px;
     line-height: 1.25;
-    -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     box-sizing: border-box;
     display: block;
@@ -24,9 +20,8 @@ export const ContentReviews = Style.section`
 
 export const Title_style = Style.h2`
 
-    font-family: 'Helvetica, Impact, Arial, sans-serif';    
+    font-family: 'Helvetica, sans-serif';    
     -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
     cursor: default;
     box-sizing: border-box;
     margin-bottom: 10px;
