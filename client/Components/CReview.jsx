@@ -30,7 +30,6 @@ class CReview extends React.Component {
     }
     this.state.currtReview.rate >= 3 ? states.src = "https://hrr41-fec-img.s3-us-west-1.amazonaws.com/user_pics/hp.png" : states.src = "https://hrr41-fec-img.s3-us-west-1.amazonaws.com/user_pics/sp.png"; 
     this.state.currtToggle ? states.postReview = this.state.currtReview.review : states.postReview = this.state.currtReview.review.split(".")[0].concat(" ...");
-    // console.log(states);
     return(
     <Review_quote className="single_review_container">
         <Media className="media" >

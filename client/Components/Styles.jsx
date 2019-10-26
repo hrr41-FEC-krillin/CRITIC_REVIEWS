@@ -1,5 +1,26 @@
 /* eslint-disable camelcase */
 import Style from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+
+export const CRGlobalStyle = createGlobalStyle`
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+  div #cr {
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    width: 800px;
+    margin: 10px auto;
+  }
+`;
 
 export const ContentReviews = Style.section` 
     -webkit-tap-highlight-color: transparent;
@@ -20,7 +41,7 @@ export const ContentReviews = Style.section`
 
 export const Title_style = Style.h2`
 
-    font-family: 'Helvetica, sans-serif';    
+    font-family: Helvetica, sans-serif;    
     -webkit-tap-highlight-color: transparent;
     cursor: default;
     box-sizing: border-box;
@@ -80,11 +101,13 @@ export const Panel_body = Style.div`
     overflow: hidden;
 `;
 
-export const CriticHeaders = Style.p`    
-    -webkit-tap-highlight-color: transparent;
+export const CriticHeaders = Style.p`
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
+
+    -webkit-tap-highlight-color:  rgb(57, 118, 220);
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
-    color: #2A2C32;
+    color: #929292;
     cursor: default;
     box-sizing: border-box;
     margin: 0 15px;
@@ -98,16 +121,19 @@ export const CriticHeaders = Style.p`
 `;
 
 export const CriticHeadersSort = Style.a`
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
 
-    font-family: 'Helvetica, Impact, Arial, sans-serif';
-    -webkit-tap-highlight-color: transparent;
+    font-family: Helvetica, Impact, Arial, sans-serif;
+    -webkit-tap-highlight-color: rgb(57, 118, 220);
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     background-color: transparent;
     text-decoration: none;
     font-size: 12px;
     line-height: 18px;
-    color: gray;
+    color: #929292;
+    cursor: pointer;
+
 `;
 export const Cr_reviews = Style.div`
     -webkit-tap-highlight-color: transparent;
@@ -133,8 +159,8 @@ export const Top_critic = Style.li`
     font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     box-sizing: border-box;
-    float: left!important;
-    clear: ${(props) => (props.key % 2 === 0 ? 'left' : 'right')};
+    float: ${props => props.index % 2 === 0 ? 'left!important': 'right!important'};
+    clear: ${props => props.index % 2 === 0 ? 'left': 'right'};;
     margin-top: 10px;
     margin-right: 30px;
     width: 346.5px;
@@ -233,7 +259,6 @@ export const Review_block = Style.blockquote`
     -webkit-font-smoothing: antialiased;
     color: #2A2C32;
     cursor: default;
-    font-family: 'PT Sans Narrow', sans-serif;
     list-style-type: none;
     box-sizing: border-box;
     zoom: 1;
@@ -268,27 +293,30 @@ export const Review_style = Style.p`
     max-height: ${(props) => (!props.Toggle ? '5em' : 'initial!important')};    
 `;
 export const Extend_style = Style.a`
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
+
+    font-family: 'Crimson Text', serif;
     font-family: 'Roboto', sans-serif;
 
-    -webkit-tap-highlight-color: transparent;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
     list-style-type: none;
     font-size: 11px;
     box-sizing: border-box;
     background-color: transparent;
-    color: #4472CA;
+    color: rgb(57, 118, 220);
     text-decoration: none;
+    cursor: pointer;
 `;
 
 export const Small_bar = Style.div`
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    font-family: 'Crimson Text', serif;
     font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
-    color: #2A2C32;
     cursor: default;
     list-style-type: none;
     box-sizing: border-box;
@@ -358,7 +386,10 @@ export const Cite_author = Style.cite`
 `;
 
 export const User_name = Style.a`
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    font-family: 'Crimson Text', serif;
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');    
+
     font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
     font-size: 12px;
@@ -369,10 +400,14 @@ export const User_name = Style.a`
     box-sizing: border-box;
     background-color: transparent;
     text-decoration: none;
-    color: #000;
+    -webkit-tap-highlight-color: blue;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
 `;
 
 export const Publication = Style.a`
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
+
     font-family: 'Helvetica, Impact, Arial, sans-serif';    
 
     -webkit-tap-highlight-color: transparent;
@@ -384,7 +419,9 @@ export const Publication = Style.a`
     text-decoration: none;
     font-size: 11px;
     line-height: 18px;
-    color: #757A84;
+    -webkit-tap-highlight-color: blue;
+    color: rgb(195, 195, 195);
+    cursor: pointer;
 `;
 
 export const Superreviewer = Style.div`
@@ -404,13 +441,11 @@ export const Superreviewer = Style.div`
 `;
 
 export const ViewAllreviews = Style.div`
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
+
     -webkit-tap-highlight-color: transparent;
-    font-size: 15px;
-    line-height: 1.25;
-    -webkit-font-smoothing: antialiased;
-    color: #2A2C32;
+    color: rgb(57, 118, 220);
     cursor: default;
-    font-family: 'PT Sans Narrow', sans-serif;
     box-sizing: border-box;
     clear: both;
     float: right;
@@ -418,13 +453,14 @@ export const ViewAllreviews = Style.div`
 `;
 
 export const ViewAll_toggle = Style.a`
-    font-family: 'Helvetica, Impact, Arial, sans-serif';    
-    -webkit-tap-highlight-color: transparent;
-    font-size: 14px;
-    line-height: 1.25;
-    -webkit-font-smoothing: antialiased;
+    @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
+
+    -webkit-tap-highlight-color: blue;
+    font-weight: 400;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    color: rgb(57, 118, 220);
+    cursor: pointer;
     box-sizing: border-box;
-    background-color: transparent;
-    text-decoration: none;
-    color: #4472CA;
 `;

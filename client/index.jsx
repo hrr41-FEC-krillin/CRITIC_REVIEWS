@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
-import { ContentReviews } from './Components/Styles.jsx';
+import { ContentReviews, CRGlobalStyle } from './Components/Styles.jsx';
 import CRHeader from './Components/CRHeader.jsx';
 
 class CR_reviews extends React.Component {
@@ -113,7 +113,9 @@ class CR_reviews extends React.Component {
     render() {
         // console.log("render",this.state);
         return (
+        
             <ContentReviews className="content_reviews">
+                <CRGlobalStyle />
                 <CRHeader movieName={this.state.movieName} list={this.state.displayTop10}
                     extList={this.state.extendDisplayCR} extent={this.state.extendAllReviews} extendAR={this.extendReviews}
                     count={this.state.count} fetchSort={this.fetchSortedReviews} />
