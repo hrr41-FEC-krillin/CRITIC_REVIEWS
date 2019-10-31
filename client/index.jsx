@@ -67,7 +67,7 @@ class CR_reviews extends React.Component {
     }
 
     fetchCReviews() {
-        Axios.get('http://localhost:4540/api/cr_reviews')
+        Axios.get('/api/cr_reviews')
             .then(results => {
                 console.log(results)
                 this.setState({
